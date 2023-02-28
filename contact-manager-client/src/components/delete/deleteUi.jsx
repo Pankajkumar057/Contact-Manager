@@ -3,7 +3,7 @@ import './delete.css';
 import deleteIcon from './delete.svg';
 import cancelBtn from './cancelBtn.svg';
 import completed from './tickMark.svg'
-import axios from 'axios';
+import axios from 'axios'
 import { isAuthenticated } from '../../helper/helper'
 
 

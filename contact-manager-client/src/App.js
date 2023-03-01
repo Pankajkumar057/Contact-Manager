@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from './components/signup/signup';
 import Table from './components/tableui/table';
 import PrivateRoute from './components/auth/PrivateRoute'
+import DeleteUi from './components/delete/DeleteUi';
 function App() {
   return (
     <>

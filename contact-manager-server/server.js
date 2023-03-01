@@ -1,23 +1,28 @@
 require('dotenv').config()
 const express = require("express")
 const cors = require("cors")
-const app = express()
-app.use(cors())
-app.use(express.json())
-const Port = process.env.PORT || 5002
-const dbconnect = require("./connections/conn")
-app.use("/",router) 
-// app.get("/test",(req,res)=>{
-//     res.send("its working")
-// })
+const express = require("express");
+require('dotenv').config();
+const cors=require('cors');
+const dbconnect=require('./connections/conn');
+const bodyParser=require('body-parser')
+dbconnect();
+
+
+const app = express();
+
+app.use(cors());
+
+app.use(bodyParser.json());
+
+
+const contactRoute=require('./routes/contactRoutes');
+
+
+app.use('/contacts',contactRoute)
 
 
 
-
-
-
-
-
-app.listen(Port,()=>{
-    console.log(`server is running at ${Port}`)
-})
+app.listen(5000, () => {
+  console.log("Server started on http://localhost:5000");
+});

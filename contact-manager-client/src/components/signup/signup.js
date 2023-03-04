@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./signup.css";
+// import "./signup.css";
 import { Navigate } from "react-router-dom";
 
 const SignUp = () => {
@@ -12,10 +12,10 @@ const SignUp = () => {
 
 
     const validateEmail = (email) => {
-        {
+        
             const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
-        }
+        
     }
 
     const validatePassword = (password) => {
@@ -36,7 +36,7 @@ const SignUp = () => {
     }
 
     const HandleClick = () => {
-        if (email, password, Confirm) {
+        if (email && password && Confirm) {
             const isVallid = validateEmail(email);
             const isPasswd = validatePassword(password);
             if (isVallid) {

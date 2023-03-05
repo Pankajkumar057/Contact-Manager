@@ -3,8 +3,7 @@ import Login from './components/login/login'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from './components/signup/signup';
 import Table from './components/tableui/table';
-import PrivateRoute from './components/auth/PrivateRoute'
-import DeleteUi from './components/delete/DeleteUi';
+import PrivateRoute from './components/auth/PrivateRoute';
 function App() {
   return (
     <>
@@ -13,6 +12,7 @@ function App() {
           <Route path="/" element={<Login/>}/>
           <Route path="/register" element={<SignUp/>}/>
           <Route path="/contacts" element={<PrivateRoute Child={Table} />}/>
+          {/* <Route path="/contacts" element={<Table />} /> */}
 
         </Routes>
       </BrowserRouter>
@@ -21,3 +21,4 @@ function App() {
 }
 
 export default App;
+
